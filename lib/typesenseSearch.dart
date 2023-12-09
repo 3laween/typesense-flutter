@@ -8,11 +8,11 @@ class SearchInstance {
   //constructor to initilize client
   SearchInstance() {
     config = Configuration(
-      'qqjem2zJor9qjem2Y7U2ke7LB', //api key from text file
+      'dsnIcsNTX9Dh26u3DeQAl9lGeAn5rg2H', //api key from text file
       nodes: {
         Node(
           Protocol.https, // For Typesense Cloud use https
-          "df2ewureufyo6p-1.a1.typesense.net", // For Typesense Cloud use xxx.a1.typesense.net
+          "yx2bajf1rs3ztviop-1.a1.typesense.net", // For Typesense Cloud use xxx.a1.typesense.net
           port: 443, // For Typesense Cloud use 443
         ),
       },
@@ -36,7 +36,7 @@ class SearchInstance {
           .documents
           .search(searchParameters);
 
-      // print(result);
+      print(result);
       var data = result["hits"];
       for (var documents in data) {
         var x = documents["document"];
